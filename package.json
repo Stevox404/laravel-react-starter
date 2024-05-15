@@ -1,0 +1,23 @@
+{
+    "name": "laravel-react-starter",
+    "author": {
+        "name": "Ben Steve",
+        "email": "benzstevox@gmail.com"
+    },
+    "description": "Boilerplate project for building web applications using Laravel and ReactJS",
+    "version": "0.0.1",
+    "type": "module",
+    "license": "MIT",
+    "scripts": {
+        "dev": "cd frontend && yarn run dev",
+        "build": "cd frontend && yarn build",
+        "postinstall": "cd frontend && yarn install",
+        "test": "npm run test:be && npm run test:e2e",
+        "test:be": "php artisan test",
+        "test:e2e": "npx playwright test"
+    },
+    "devDependencies": {
+        "@prettier/plugin-php": "^0.22.2",
+        "prettier": "^3.2.5"
+    }
+}

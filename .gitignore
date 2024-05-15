@@ -1,0 +1,36 @@
+# env files
+.env
+.env.*
+!.env.example
+
+# packages
+/node_modules
+/vendor
+
+# dist
+/public/build*
+/public/hot
+/public/storage
+
+# cfg files
+Homestead.json
+Homestead.yaml
+auth.json
+
+# logs
+npm-debug.log
+yarn-error.log
+
+# testing
+.phpunit.result.cache
+
+# vscode
+/.vscode/**
+!/.vscode/laravel-react-starter.code-workspace
+!/.vscode/tasks.json
+
+# other
+/storage/*.key
+/.fleet
+/.idea
+/.task
