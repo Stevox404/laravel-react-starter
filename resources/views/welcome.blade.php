@@ -1,3 +1,3 @@
 <?php
-    include public_path("build") . DIRECTORY_SEPARATOR . "handler.php";
+    include public_path("handler.php");
 ?>
