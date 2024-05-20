@@ -3,6 +3,7 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 
 export default defineConfig(({ mode, command }) => {
+    // Load variables that change between environments
     const env = {
         ...loadEnv(mode, process.cwd(), ""),
         ...loadEnv(mode, path.join(__dirname, ".."), ""),
@@ -29,6 +30,7 @@ export default defineConfig(({ mode, command }) => {
         },
         resolve: {
             alias: {
+                // Allow accessing the `src` directory from anywhere in the tree using `@src`
                 "@src": path.resolve(__dirname, "./src"),
             },
         },
@@ -38,12 +40,8 @@ export default defineConfig(({ mode, command }) => {
     };
 });
 
-function noTrailingSlash(str: string, defaultStr = "") {
-    let res = str || defaultStr;
-    if (/\/$/.test(res)) {
-        // Remove trailing slash if any
-        res = res.substring(0, res.length - 1);
-    }
-    return res;
+// Remove trailing slash if any
+function noTrailingSlash(str: string) {
+    return /\/$/.test(str) ?str.substring(0, str.length - 1):str;
 }
 
