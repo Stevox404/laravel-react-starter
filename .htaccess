@@ -20,6 +20,9 @@
 	RewriteCond %{SCRIPT_FILENAME} !-f
 	RewriteRule ^ public/handler.php [L]
 
+    # Send any file Requests not in the public folder to Front Controller...
+    RewriteCond %{REQUEST_URI} !public/
+    RewriteRule \.\w+$ index.php [L]
     
     # Send Requests To Front Controller...
     RewriteCond %{REQUEST_FILENAME} !-d

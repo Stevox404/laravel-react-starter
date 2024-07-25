@@ -50,4 +50,6 @@
                     Please note that any changes made to the source code will need to be
                     built again for the changes to be reflected on the website.
                 </p>
-                
+        </div>
+    </body>
+</html>
